@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@layer base {
+  :root {
+    --background: 120deg 20% 4%;
+    --card: 120deg 20% 8%;
+    --disabled: 120deg 30% 20%;
+    --border: 0deg 0% 100% 0.1;
+    --border-active: 0deg 0% 100% 0.3;
+    --primary: 120deg 30% 80%;
+    --primary-fg: 120deg 30% 60%;
+    --destructive: 5deg 80% 60%;
+    --destructive-fg: 5deg 80% 50%;
+    --accent: 120deg 60% 50%;
+  }
+}
