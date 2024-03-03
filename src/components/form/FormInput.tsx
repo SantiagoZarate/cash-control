@@ -6,7 +6,7 @@ export function FormInput(args: Props) {
   return (
     <input
       {...args}
-      className="text-sm placeholder:text-disabled border border-border bg-card rounded-md flex-1"
+      className="py-2 px-2 text-sm placeholder:text-disabled border border-border bg-card rounded-xl flex-1"
     />
   );
 }
