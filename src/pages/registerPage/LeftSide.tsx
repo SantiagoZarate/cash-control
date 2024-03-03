@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { SignUpForm } from "./SignUpForm";
 import { LogInForm } from "./LogInForm";
-import { Badge } from "@component";
+import { Badge, Button } from "@component";
 
 export function LeftSide() {
   const [showSignUp, setShowSignUp] = useState(true);
 
   return (
-    <article className="flex items-center flex-col gap-20 flex-wrap justify-center px-8">
-      <button onClick={() => setShowSignUp(!showSignUp)}>toggle</button>
-      <div className="flex flex-col gap-12">
-        <header className="flex flex-col gap-1">
-          <h3 className="text-lg">
-            First time here?<span className="text-accent"> sign up!</span>
-          </h3>
-        </header>
+    <article className="flex items-center flex-col justify-center gap-12 flex-wrap px-8">
+      <div className="flex gap-2 bg-card px-2 py-2 rounded-full border border-border">
+        <Button onClick={() => setShowSignUp(true)}>Sign Up</Button>
+        <Button onClick={() => setShowSignUp(false)}>Log in</Button>
+      </div>
+      <div className="flex flex-col gap-12 items-center">
         {showSignUp ? <SignUpForm /> : <LogInForm />}
       </div>
       <Badge>
