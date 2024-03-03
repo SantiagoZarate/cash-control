@@ -17,4 +17,4 @@ Stack React, Tailwindcss, Tanstack Query, Zustand
 
 ### Non Functional Requirements:
 
-- [ ] Data will be storaged on locally;
+- [ ] Data will be locally storaged;
