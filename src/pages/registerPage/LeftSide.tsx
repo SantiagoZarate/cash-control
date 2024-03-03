@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SignUpForm } from "./SignUpForm";
 import { LogInForm } from "./LogInForm";
+import { Badge } from "@component";
 
 export function LeftSide() {
   const [showSignUp, setShowSignUp] = useState(true);
@@ -16,9 +17,11 @@ export function LeftSide() {
         </header>
         {showSignUp ? <SignUpForm /> : <LogInForm />}
       </div>
-      <a href="#" className="text-xs text-border">
-        click here if you just wanna see the rest of the app lol...
-      </a>
+      <Badge>
+        <a href="#" className="text-disabled">
+          click here if you just wanna see the rest of the app lol...
+        </a>
+      </Badge>
     </article>
   );
 }
