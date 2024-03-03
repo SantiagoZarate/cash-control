@@ -1,4 +1,4 @@
-# Cash Control
+# Cash Control 💸
 
 Stack React, Tailwindcss, Tanstack Query, Zustand
 
