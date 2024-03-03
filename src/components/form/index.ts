@@ -1,3 +1,4 @@
+import { FormErrorMessage } from "./FormErrorMessage";
 import { FormField } from "./FormField";
 import { FormIcon } from "./FormIcon";
 import { FormInput } from "./FormInput";
@@ -10,4 +11,5 @@ export const Form = {
   Field: FormField,
   Icon: FormIcon,
   Label: FormLabel,
+  ErrorMessage: FormErrorMessage,
 };

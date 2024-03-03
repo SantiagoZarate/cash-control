@@ -1,8 +1,8 @@
 import { useForm, FormProvider } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Form } from "@component";
 import { CardIcon, EnvelopeIcon } from "@icon";
+import { Button, Form } from "@component";
+import { z } from "zod";
 
 const signUpSchema = z.object({
   username: z
@@ -12,14 +12,14 @@ const signUpSchema = z.object({
     .max(12, "name must have less than 12 characters"),
   email: z
     .string()
-    .email()
+    .email("invalid email format")
     .refine(
       (email) => email.endsWith("@gmail.com"),
       "email must use a gmail domain"
     ),
 });
 
-type SignUpType = z.infer<typeof signUpSchema>;
+export type SignUpType = z.infer<typeof signUpSchema>;
 
 export function SignUpForm() {
   const methods = useForm<SignUpType>({
@@ -31,6 +31,7 @@ export function SignUpForm() {
     console.log(data);
     reset();
   };
+
   return (
     <FormProvider {...methods}>
       <Form.Root onSubmit={handleSubmit(handleCreateUser)}>
@@ -40,6 +41,7 @@ export function SignUpForm() {
             username
           </Form.Label>
           <Form.Input name="username" placeholder="LionelMessi10" />
+          <Form.ErrorMessage name="username" />
         </Form.Field>
         <Form.Field>
           <Form.Label>
@@ -47,6 +49,7 @@ export function SignUpForm() {
             email
           </Form.Label>
           <Form.Input name="email" placeholder="messilionel@gmail.com" />
+          <Form.ErrorMessage name="email" />
         </Form.Field>
         <Button>Sign up</Button>
       </Form.Root>
