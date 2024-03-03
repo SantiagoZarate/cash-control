@@ -24,7 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@icon": ["src/components/icons/index.tsx"],
-      "@component": ["src/components/index.ts"]
+      "@component": ["src/components/index.ts"],
+      "@util/*": ["src/util/*"]
     }
   },
   "include": ["src"],
