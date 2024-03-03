@@ -1,5 +1,4 @@
-import { Button, Form } from "@component";
-import { CardIcon, EnvelopeIcon } from "@icon";
+import { SignUpForm } from "./SignUpForm";
 
 export function LeftSide() {
   return (
@@ -9,27 +8,11 @@ export function LeftSide() {
           <h3 className="text-lg">
             First time here?<span className="text-accent"> sign up!</span>
           </h3>
-          <a className="text-xs text-border">
+          <a href="#" className="text-xs text-border">
             click here if you just wanna see the rest of the app lol...
           </a>
         </header>
-        <Form.Root>
-          <Form.Field>
-            <Form.Label>
-              <CardIcon />
-              username
-            </Form.Label>
-            <Form.Input placeholder="LionelMessi10" />
-          </Form.Field>
-          <Form.Field>
-            <Form.Label>
-              <EnvelopeIcon />
-              email
-            </Form.Label>
-            <Form.Input placeholder="messilionel@gmail.com" />
-          </Form.Field>
-          <Button>Sign up</Button>
-        </Form.Root>
+        <SignUpForm />
       </div>
     </article>
   );
