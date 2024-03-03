@@ -1,6 +1,6 @@
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CardIcon, EnvelopeIcon } from "@icon";
+import { CardIcon, KeyIcon } from "@icon";
 import { Button, Form, Heading, Text } from "@component";
 import { LogInSchema, LogInType } from "@util/signUpSchema";
 
@@ -33,7 +33,7 @@ export function LogInForm() {
           </Form.Field>
           <Form.Field>
             <Form.Label>
-              <EnvelopeIcon />
+              <KeyIcon />
               password
             </Form.Label>
             <Form.Input name="password" placeholder="messilionel@gmail.com" />

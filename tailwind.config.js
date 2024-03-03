@@ -3,6 +3,9 @@ export default {
   content: ["src/**/*.tsx"],
   theme: {
     extend: {
+      fontFamily: {
+        NunitoSans: ["NunitoSans", "sans-serif"],
+      },
       colors: {
         background: "hsl(var(--background)/<alpha-value>)",
         card: "hsl(var(--card)/<alpha-value>)",

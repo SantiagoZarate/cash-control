@@ -1,6 +1,6 @@
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CardIcon, EnvelopeIcon } from "@icon";
+import { CardIcon, EnvelopeIcon, KeyIcon } from "@icon";
 import { Button, Form, Heading, Text } from "@component";
 import { SignUpType, signUpSchema } from "@util/signUpSchema";
 
@@ -40,7 +40,7 @@ export function SignUpForm() {
           </Form.Field>
           <Form.Field>
             <Form.Label>
-              <CardIcon />
+              <KeyIcon />
               password
             </Form.Label>
             <Form.Input
