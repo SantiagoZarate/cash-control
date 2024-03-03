@@ -1,6 +1,6 @@
+import { SignUpType } from "@util/signUpSchema";
 import { ComponentProps } from "react";
 import { useFormContext } from "react-hook-form";
-import { SignUpType } from "src/pages/registerPage/SignUpForm";
 
 type Props = ComponentProps<"span"> & {
   name: keyof SignUpType;

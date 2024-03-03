@@ -2,15 +2,15 @@ import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CardIcon, EnvelopeIcon } from "@icon";
 import { Button, Form } from "@component";
-import { SignUpType, signUpSchema } from "@util/signUpSchema";
+import { LogInSchema, LogInType } from "@util/signUpSchema";
 
-export function SignUpForm() {
-  const methods = useForm<SignUpType>({
-    resolver: zodResolver(signUpSchema),
+export function LogInForm() {
+  const methods = useForm<LogInType>({
+    resolver: zodResolver(LogInSchema),
   });
   const { reset, handleSubmit } = methods;
 
-  const handleCreateUser = (data: SignUpType) => {
+  const handleCreateUser = (data: LogInType) => {
     console.log(data);
     reset();
   };
@@ -29,18 +29,10 @@ export function SignUpForm() {
         <Form.Field>
           <Form.Label>
             <EnvelopeIcon />
-            email
-          </Form.Label>
-          <Form.Input name="email" placeholder="messilionel@gmail.com" />
-          <Form.ErrorMessage name="email" />
-        </Form.Field>
-        <Form.Field>
-          <Form.Label>
-            <CardIcon />
             password
           </Form.Label>
-          <Form.Input type="password" name="username" placeholder="********" />
-          <Form.ErrorMessage name="username" />
+          <Form.Input name="password" placeholder="messilionel@gmail.com" />
+          <Form.ErrorMessage name="password" />
         </Form.Field>
         <Button>Sign up</Button>
       </Form.Root>
