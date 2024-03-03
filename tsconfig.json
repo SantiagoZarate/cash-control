@@ -23,7 +23,8 @@
     /* Alias */
     "baseUrl": ".",
     "paths": {
-      "@icon": ["src/components/icons/index.tsx"]
+      "@icon": ["src/components/icons/index.tsx"],
+      "@component": ["src/components/index.ts"]
     }
   },
   "include": ["src"],

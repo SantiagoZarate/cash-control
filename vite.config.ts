@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@icon": path.resolve(__dirname, "src/components/icons/index.tsx"),
+      "@component": path.resolve(__dirname, "src/components/index.ts"),
     },
   },
 });

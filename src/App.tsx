@@ -1,3 +1,5 @@
+import { RegisterPage } from "./pages/registerPage";
+
 export default function App() {
-  return <div className="min-h-screen bg-background"></div>;
+  return <RegisterPage />;
 }
