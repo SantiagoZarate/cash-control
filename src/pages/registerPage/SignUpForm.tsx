@@ -50,7 +50,7 @@ export function SignUpForm() {
             />
             <Form.ErrorMessage name="username" />
           </Form.Field>
-          <Button>Sign up</Button>
+          <Button intent={"outline"}>Sign up</Button>
         </Form.Root>
       </FormProvider>
     </>

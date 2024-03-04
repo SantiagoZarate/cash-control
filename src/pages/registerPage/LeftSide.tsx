@@ -9,8 +9,12 @@ export function LeftSide() {
   return (
     <article className="flex items-center flex-col justify-center gap-12 flex-wrap px-8">
       <div className="flex gap-2 bg-card px-2 py-2 rounded-full border border-border">
-        <Button onClick={() => setShowSignUp(true)}>Sign Up</Button>
-        <Button onClick={() => setShowSignUp(false)}>Log in</Button>
+        <Button disabled={!showSignUp} onClick={() => setShowSignUp(true)}>
+          Sign Up
+        </Button>
+        <Button disabled={showSignUp} onClick={() => setShowSignUp(false)}>
+          Log in
+        </Button>
       </div>
       <div className="flex flex-col gap-12 items-center">
         {showSignUp ? <SignUpForm /> : <LogInForm />}
