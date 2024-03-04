@@ -1,5 +1,5 @@
+import { CVAProps } from "@type";
 import { buttonStyles } from "./Button.styles";
-import { CVAProps } from "src/types";
 
 type Props = CVAProps<"button", typeof buttonStyles>;
 

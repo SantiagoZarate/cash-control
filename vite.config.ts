@@ -10,6 +10,7 @@ export default defineConfig({
       "@icon": path.resolve(__dirname, "src/components/icons/index.tsx"),
       "@component": path.resolve(__dirname, "src/components/index.ts"),
       "@util": path.resolve(__dirname, "src/util"),
+      "@type": path.resolve(__dirname, "src/types.ts"),
     },
   },
 });

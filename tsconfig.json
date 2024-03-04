@@ -25,6 +25,7 @@
     "paths": {
       "@icon": ["src/components/icons/index.tsx"],
       "@component": ["src/components/index.ts"],
+      "@type": ["src/types.ts"],
       "@util/*": ["src/util/*"]
     }
   },
