@@ -36,7 +36,11 @@ export function LogInForm() {
               <KeyIcon />
               password
             </Form.Label>
-            <Form.Input name="password" placeholder="messilionel@gmail.com" />
+            <Form.Input
+              type="password"
+              name="password"
+              placeholder="messilionel@gmail.com"
+            />
             <Form.ErrorMessage name="password" />
           </Form.Field>
           <Button>Sign up</Button>

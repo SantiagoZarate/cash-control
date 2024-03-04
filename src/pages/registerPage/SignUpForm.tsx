@@ -23,32 +23,41 @@ export function SignUpForm() {
       <FormProvider {...methods}>
         <Form.Root onSubmit={handleSubmit(handleCreateUser)}>
           <Form.Field>
-            <Form.Label>
+            <Form.Label htmlFor="username">
               <CardIcon />
               username
             </Form.Label>
-            <Form.Input name="username" placeholder="LionelMessi10" />
+            <Form.Input
+              id="username"
+              name="username"
+              placeholder="LionelMessi10"
+            />
             <Form.ErrorMessage name="username" />
           </Form.Field>
           <Form.Field>
-            <Form.Label>
+            <Form.Label htmlFor="email">
               <EnvelopeIcon />
               email
             </Form.Label>
-            <Form.Input name="email" placeholder="messilionel@gmail.com" />
+            <Form.Input
+              id="email"
+              name="email"
+              placeholder="messilionel@gmail.com"
+            />
             <Form.ErrorMessage name="email" />
           </Form.Field>
           <Form.Field>
-            <Form.Label>
+            <Form.Label htmlFor="password">
               <KeyIcon />
               password
             </Form.Label>
             <Form.Input
+              id="password"
               type="password"
-              name="username"
+              name="password"
               placeholder="********"
             />
-            <Form.ErrorMessage name="username" />
+            <Form.ErrorMessage name="password" />
           </Form.Field>
           <Button intent={"outline"}>Sign up</Button>
         </Form.Root>
