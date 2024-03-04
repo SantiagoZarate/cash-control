@@ -23,7 +23,7 @@ export function useRegisterForm(isSignUp: boolean) {
     tasks.getUser().then((res) => {
       const { password, username } = res.users[0];
       if (data.password === password && data.username === username) {
-        navigate("/404");
+        navigate("/guide");
       }
     });
     methods.reset();

@@ -17,7 +17,7 @@ export function LeftSide() {
       </div>
       <RegisterForm isSignUp={showSignUp} />
       <Badge>
-        <a href="#" className="text-border-active">
+        <a href="/guide" className="text-border-active">
           click here if you just wanna see the rest of the app lol...
         </a>
       </Badge>
