@@ -1,10 +1,8 @@
-import { ComponentProps } from "react";
+import { buttonStyles } from "./Button.styles";
+import { CVAProps } from "src/types";
 
-export function Button(args: ComponentProps<"button">) {
-  return (
-    <button
-      {...args}
-      className="rounded-full w-fit hover:brightness-75 transition duration-150 flex items-center gap-2 px-4 py-2 bg-primary text-primary-fg uppercase font-bold text-sm"
-    />
-  );
+type Props = CVAProps<"button", typeof buttonStyles>;
+
+export function Button({ intent, className, ...args }: Props) {
+  return <button {...args} className={buttonStyles({ intent, className })} />;
 }
