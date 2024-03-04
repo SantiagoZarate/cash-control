@@ -9,7 +9,8 @@ export const buttonStyles = cva(
       intent: {
         default: "bg-primary text-primary-fg",
         destructive: "bg-destructive text-destructive-fg",
-        outline: "border border-border text-border-active hover:bg-primary",
+        outline:
+          "outline outline-1 outline-border text-border-active hover:bg-primary",
       },
       disabled: {
         true: "brightness-50",
