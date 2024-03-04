@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Badge, Button } from "@component";
-import { RegisterForm } from "./Form";
+import { RegisterForm } from "./registerForm";
 
 export function LeftSide() {
   const [showSignUp, setShowSignUp] = useState(true);
