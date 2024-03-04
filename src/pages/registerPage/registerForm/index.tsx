@@ -11,12 +11,11 @@ import React from "react";
 type Props = {
   isSignUp: boolean;
 };
-
 const UsernameFieldMemo = React.memo(UsernameField);
 const PasswordFieldMemo = React.memo(PasswordField);
 
 export function RegisterForm({ isSignUp }: Props) {
-  const { createUser, logIn, methods } = useRegisterForm(isSignUp);
+  const { createUser, logIn, methods, isPending } = useRegisterForm(isSignUp);
 
   return (
     <section className="flex flex-col gap-12 items-center">
@@ -28,7 +27,7 @@ export function RegisterForm({ isSignUp }: Props) {
           <UsernameFieldMemo />
           {isSignUp && <EmialField />}
           <PasswordFieldMemo />
-          <Button intent={"outline"}>Sign up</Button>
+          <Button intent={"outline"}>{isPending ? "Loading" : "Send"}</Button>
         </Form.Root>
       </FormProvider>
     </section>

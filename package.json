@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "3.3.4",
+    "@tanstack/react-query": "5.24.7",
     "cash-control": "link:",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",

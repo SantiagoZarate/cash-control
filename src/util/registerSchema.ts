@@ -1,7 +1,5 @@
 import { z } from "zod";
 
-const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-
 const commonUserSchema = z.object({
   username: z
     .string()
@@ -12,7 +10,7 @@ const commonUserSchema = z.object({
     .string()
     .min(5, "Password must have at least 5 letter")
     .regex(
-      passwordRegex,
+      /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/,
       "Password must contain at least one number and one symbol"
     ),
 });
