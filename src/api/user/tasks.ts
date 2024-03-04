@@ -1,7 +1,6 @@
-const URL = import.meta.env.VITE_BIN_URL;
-const BIN_ID = import.meta.env.VITE_BIN_ID;
+import { envs } from "../../envs";
 
-const completeURL = `${URL}/b/${BIN_ID}?meta=false`;
+const completeURL = `${envs.URL}/b/${envs.BIN_ID}?meta=false`;
 
 export const tasks = {
   postUser(data: string) {
