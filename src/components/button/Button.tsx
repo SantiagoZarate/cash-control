@@ -15,20 +15,30 @@ export const buttonStyles = cva(
       disabled: {
         true: "brightness-50",
       },
+      hoverable: {
+        true: "hover:-translate-y-1",
+      },
     },
     defaultVariants: {
       intent: "default",
       disabled: false,
+      hoverable: false,
     },
   }
 );
 
 type Props = CVAProps<"button", typeof buttonStyles>;
 
-export function Button({ intent, className, disabled, ...args }: Props) {
+export function Button({
+  intent,
+  className,
+  disabled,
+  hoverable,
+  ...args
+}: Props) {
   return (
     <button
-      className={cn(buttonStyles({ intent, className, disabled }))}
+      className={cn(buttonStyles({ intent, className, disabled, hoverable }))}
       {...args}
     />
   );
