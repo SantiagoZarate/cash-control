@@ -3,12 +3,14 @@ import { LogInSchema, SignUpType, signUpSchema } from "@util/registerSchema";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { tasks } from "../api/user/tasks";
+import { useNavigate } from "react-router-dom";
 
 export function useRegisterForm(isSignUp: boolean) {
+  const navigate = useNavigate();
   const methods = useForm<SignUpType>({
     resolver: zodResolver(isSignUp ? signUpSchema : LogInSchema),
   });
-  const { mutate, isPending } = useMutation({
+  const { isPending } = useMutation({
     mutationFn: tasks.getUser,
   });
 
@@ -17,9 +19,13 @@ export function useRegisterForm(isSignUp: boolean) {
     methods.reset();
   }
 
-  function logIn() {
-    console.log("Estoy logeando");
-    mutate();
+  function logIn(data: Omit<SignUpType, "email">) {
+    tasks.getUser().then((res) => {
+      const { password, username } = res.users[0];
+      if (data.password === password && data.username === username) {
+        navigate("/404");
+      }
+    });
     methods.reset();
   }
 
