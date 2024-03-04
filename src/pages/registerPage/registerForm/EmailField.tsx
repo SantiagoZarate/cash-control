@@ -1,7 +1,7 @@
 import { EnvelopeIcon } from "@icon";
 import { Form } from "@component";
 
-export function EmialField() {
+export function EmailField() {
   return (
     <Form.Field key={"email"}>
       <Form.Label htmlFor="email">

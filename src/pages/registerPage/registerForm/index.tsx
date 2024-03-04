@@ -5,7 +5,7 @@ import { UsernameField } from "./UsernameField";
 import { PasswordField } from "./PasswordField";
 import { SignUpHeader } from "./SignUpHeader";
 import { LogInHeader } from "./LogInHeader";
-import { EmialField } from "./EmialField";
+import { EmailField } from "./EmailField";
 import React from "react";
 
 const UsernameFieldMemo = React.memo(UsernameField);
@@ -26,7 +26,7 @@ export function RegisterForm({ isSignUp }: Props) {
           onSubmit={methods.handleSubmit(isSignUp ? createUser : logIn)}
         >
           <UsernameFieldMemo />
-          {isSignUp && <EmialField />}
+          {isSignUp && <EmailField />}
           <PasswordFieldMemo />
           {!isPending ? <Button intent={"outline"}>Send</Button> : <Loader />}
         </Form.Root>
