@@ -10,8 +10,8 @@ export function SignUpForm() {
   });
   const { reset, handleSubmit } = methods;
 
-  const handleCreateUser = (data: SignUpType) => {
-    console.log(data);
+  const handleCreateUser = () => {
+    console.log("estoy creando una nueva cuenta");
     reset();
   };
 
@@ -34,18 +34,20 @@ export function SignUpForm() {
             />
             <Form.ErrorMessage name="username" />
           </Form.Field>
-          <Form.Field>
-            <Form.Label htmlFor="email">
-              <EnvelopeIcon />
-              email
-            </Form.Label>
-            <Form.Input
-              id="email"
-              name="email"
-              placeholder="messilionel@gmail.com"
-            />
-            <Form.ErrorMessage name="email" />
-          </Form.Field>
+          {true && (
+            <Form.Field>
+              <Form.Label htmlFor="email">
+                <EnvelopeIcon />
+                email
+              </Form.Label>
+              <Form.Input
+                id="email"
+                name="email"
+                placeholder="messilionel@gmail.com"
+              />
+              <Form.ErrorMessage name="email" />
+            </Form.Field>
+          )}
           <Form.Field>
             <Form.Label htmlFor="password">
               <KeyIcon />

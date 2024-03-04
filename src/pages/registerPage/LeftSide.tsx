@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { SignUpForm } from "./SignUpForm";
-import { LogInForm } from "./LogInForm";
 import { Badge, Button } from "@component";
+import { RegisterForm } from "./Form";
 
 export function LeftSide() {
   const [showSignUp, setShowSignUp] = useState(true);
@@ -16,9 +15,7 @@ export function LeftSide() {
           Log in
         </Button>
       </div>
-      <div className="flex flex-col gap-12 items-center">
-        {showSignUp ? <SignUpForm /> : <LogInForm />}
-      </div>
+      <RegisterForm isSignUp={showSignUp} />
       <Badge>
         <a href="#" className="text-border-active">
           click here if you just wanna see the rest of the app lol...
