@@ -5,7 +5,7 @@ type Props = ComponentProps<"span">;
 export function Badge(args: Props) {
   return (
     <span
-      className="text-xs rounded-full text-primary px-2 py-1 bg-card"
+      className="text-xs flex uppercase items-center gap-2 rounded-full text-primary px-3 py-1 bg-card"
       {...args}
     />
   );
