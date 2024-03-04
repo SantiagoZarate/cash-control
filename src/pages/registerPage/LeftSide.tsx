@@ -1,26 +1,22 @@
-import { useState } from "react";
-import { Badge, Button } from "@component";
-import { RegisterForm } from "./registerForm";
-
 export function LeftSide() {
-  const [showSignUp, setShowSignUp] = useState(true);
-
   return (
-    <article className="flex items-center flex-col justify-center gap-12 flex-wrap px-8">
-      <div className="flex gap-2 bg-card px-2 py-2 rounded-full border border-border">
-        <Button disabled={!showSignUp} onClick={() => setShowSignUp(true)}>
-          Sign Up
-        </Button>
-        <Button disabled={showSignUp} onClick={() => setShowSignUp(false)}>
-          Log in
-        </Button>
-      </div>
-      <RegisterForm isSignUp={showSignUp} />
-      <Badge>
-        <a href="/guide" className="text-border-active">
-          click here if you just wanna see the rest of the app lol...
-        </a>
-      </Badge>
+    <article className="group bg-card relative flex justify-center items-center">
+      <img
+        draggable={false}
+        className="h-full absolute object-cover mix-blend-multiply saturate-0 contrast-50 brightness-200 w-full"
+        src="images/hero.webp"
+        alt=""
+      />
+      <header className="relative p-12 flex flex-col gap-4">
+        <h1 className="text-4xl text-accent font-bold text-center">
+          Cash Counter{" "}
+          <span className="group-hover:bg-primary duration-150 transition rounded-full">
+            {" "}
+            💸
+          </span>
+        </h1>
+        <p>Take Charge of Your Money, Anytime, Anywhere.</p>
+      </header>
     </article>
   );
 }
