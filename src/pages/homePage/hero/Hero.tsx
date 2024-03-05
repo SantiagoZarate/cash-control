@@ -27,7 +27,7 @@ const actions = [
 
 export function Hero() {
   return (
-    <section className="hero group/hero relative p-20 py-40 gap-8 grid grid-cols-3 items-center ">
+    <section className="max-w-screen-[1440px] mx-auto hero group/hero relative p-20 py-40 gap-8 grid grid-cols-3 items-center ">
       <LightImage />
       <MoneyDisplay />
       <article className="col-span-2 z-10 h-fit flex justify-center flex-wrap gap-4">
