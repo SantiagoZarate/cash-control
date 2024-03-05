@@ -18,6 +18,18 @@ export default {
         "primary-fg": "hsl(var(--primary-fg)/<alpha-value>)",
         accent: "hsl(var(--accent)/<alpha-value>)",
       },
+      animation: {
+        "pulse-slower": "pulse-slower 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        levitate: "levitate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      keyframes: {
+        "pulse-slower": {
+          "50%": { opacity: 0.5, transform: "translateY(30px)" },
+        },
+        levitate: {
+          "50%": { opacity: 0.2, transform: "translateY(-30px)" },
+        },
+      },
     },
   },
   plugins: [],
