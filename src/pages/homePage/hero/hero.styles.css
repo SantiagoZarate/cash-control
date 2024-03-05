@@ -1,0 +1,15 @@
+:root {
+  --border-usd-color: hsl(120deg, 50%, 60%);
+}
+
+.usd-display {
+  text-shadow: -1px -1px 0 var(--border-usd-color),
+    1px -1px 0 var(--border-usd-color), -1px 1px 0 var(--border-usd-color),
+    1px 1px 0 var(--border-usd-color);
+}
+
+.hero:hover .usd-display {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0), 1px -1px 0 rgba(0, 0, 0, 0),
+    -1px 1px 0 rgba(0, 0, 0, 0), 1px 1px 0 rgba(0, 0, 0, 0);
+  transition: all 300ms;
+}

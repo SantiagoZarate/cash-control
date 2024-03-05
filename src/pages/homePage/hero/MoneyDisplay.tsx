@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BlurBall } from "./Blob";
+import { InformationMicroIcon } from "@icon";
 
 export function MoneyDisplay() {
   const [showMoney, setShowMoney] = useState(false);
@@ -13,15 +14,21 @@ export function MoneyDisplay() {
   return (
     <article className="relative z-20  flex flex-col gap-2 justify-center">
       <BlurBall />
-      <h4>Your money</h4>
+      <header className="flex gap-2 items-center">
+        <InformationMicroIcon />
+        <h4 className="uppercase text-sm">Your money</h4>
+      </header>
       <div className="pb-2 border-b border-border flex flex-col gap-2">
         {showMoney ? (
           <>
             <p className="flex gap-2 items-baseline">
-              <span className="font-bold text-[48px]">$912.00</span>USD
+              <span className="usd-display text-background font-bold text-[48px] group-hover/hero:text-accent duration-300 transition-colors antialiased">
+                $912.00
+              </span>
+              USD
             </p>
             <p className="flex gap-2 items-baseline">
-              <span className="font-bold">$912.18</span>ARS
+              <span className="font-bold">$4.912.18</span>ARS
             </p>
           </>
         ) : (
@@ -31,7 +38,7 @@ export function MoneyDisplay() {
           </>
         )}
       </div>
-      <footer>$1 USD = $1000 ARS</footer>
+      <footer className="text-border-active">$1 USD = $1000 ARS</footer>
     </article>
   );
 }
