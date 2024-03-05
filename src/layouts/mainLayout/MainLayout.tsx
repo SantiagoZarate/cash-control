@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { AsideBar } from "../common/asideBar/AsideBar";
+import { AsideBar } from "./AsideBar";
 
 export function MainLayout() {
   return (
