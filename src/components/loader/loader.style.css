@@ -1,6 +1,6 @@
 .container {
-  --uib-size: 32px;
-  --uib-color: #fff;
+  --uib-size: 47px;
+  --uib-color: hsl(120deg, 30%, 80%);
   --uib-speed: 1s;
   --uib-dot-size: calc(var(--uib-size) * 0.18);
   display: flex;
