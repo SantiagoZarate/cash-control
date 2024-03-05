@@ -34,7 +34,7 @@ export function Blob2(args: ComponentProps<"svg">) {
   );
 }
 
-export function BlurBall() {
+export function BlurBalls() {
   return (
     <div className="absolute inset-0 z-10 flex items-center pointer-events-none ">
       <div className="flex flex-1 ">
