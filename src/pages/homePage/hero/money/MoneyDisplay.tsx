@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
-import { BlurBalls } from "./BlurBalls";
 import { ClosedEyeIcon, InformationMicroIcon, OpenEyenIcon } from "@icon";
+import React, { useEffect, useState } from "react";
 import { MoneyAmount } from "./MoneyAmount";
 import { MoneyLoader } from "./MoneyLoader";
+import { BlurBalls } from "./BlurBalls";
+
+const BlurBallsMemo = React.memo(BlurBalls);
 
 export function MoneyDisplay() {
   const [showMoney, setShowMoney] = useState(false);
@@ -15,8 +17,11 @@ export function MoneyDisplay() {
   }, []);
 
   return (
-    <article className="relative z-20  flex flex-col gap-2 justify-center">
-      <BlurBalls />
+    <article
+      id="actions"
+      className="relative z-20 min-w-[360px] flex flex-col gap-2 justify-center"
+    >
+      <BlurBallsMemo />
       <header className="flex gap-2 items-center">
         <InformationMicroIcon />
         <h4 className="uppercase text-sm">Your money</h4>

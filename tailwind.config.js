@@ -24,9 +24,15 @@ export default {
       animation: {
         "pulse-slower": "pulse-slower 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         levitate: "levitate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "pulse-variation":
+          "pulse-variation 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
         "pulse-slower": {
+          "50%": { opacity: 0.5, transform: "translateY(30px)" },
+        },
+        "pulse-variation": {
+          "0%, 100%": { opacity: 0, transform: "translateY(-10px)" },
           "50%": { opacity: 0.5, transform: "translateY(30px)" },
         },
         levitate: {
