@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { PageNotFound, RegisterPage, UsersGuidePage } from "./pages";
+import { HomePage, PageNotFound, RegisterPage, UsersGuidePage } from "./pages";
 import { ProtectedRoute } from "@util/ProtectedRoute";
+import { MainLayout } from "./layouts/MainLayout";
 
 export default function App() {
   return (
@@ -8,8 +9,11 @@ export default function App() {
       <Route path="/" element={<RegisterPage />} />
       <Route path="/guide" element={<UsersGuidePage />} />
       <Route path="*" element={<PageNotFound />} />
+
       <Route element={<ProtectedRoute />}>
-        <Route path="/home" element={<div>this is the home</div>} />
+        <Route element={<MainLayout />}>
+          <Route path="/home" element={<HomePage />} />
+        </Route>
       </Route>
     </Routes>
   );
