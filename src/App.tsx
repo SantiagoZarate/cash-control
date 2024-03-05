@@ -7,10 +7,10 @@ export default function App() {
     <Routes>
       <Route path="/" element={<RegisterPage />} />
       <Route path="/guide" element={<UsersGuidePage />} />
+      <Route path="*" element={<PageNotFound />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/home" element={<div>this is the home</div>} />
       </Route>
-      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }

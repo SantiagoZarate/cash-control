@@ -26,7 +26,8 @@
       "@icon": ["src/components/icons/index.tsx"],
       "@component": ["src/components/index.ts"],
       "@type": ["src/types.ts"],
-      "@util/*": ["src/util/*"]
+      "@util/*": ["src/util/*"],
+      "@hook/*": ["src/hooks/*"]
     }
   },
   "include": ["src"],

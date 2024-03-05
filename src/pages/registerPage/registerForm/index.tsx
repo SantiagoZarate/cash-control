@@ -1,4 +1,4 @@
-import { useRegisterForm } from "../../../hooks/useRegisterForm";
+import { useRegisterForm } from "@hook/useRegisterForm";
 import { Button, Form, Heading, Loader } from "@component";
 import { FormProvider } from "react-hook-form";
 import { UsernameField } from "./UsernameField";
