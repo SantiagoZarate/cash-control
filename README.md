@@ -18,3 +18,8 @@ Stack React, Tailwindcss, Tanstack Query, Zustand
 ### Non Functional Requirements:
 
 - [ ] Data will be locally storaged;
+
+# Todo
+
+- Add slide from sign up to log in
+- Remove browser default style on form input.
