@@ -26,7 +26,7 @@ export function AsideBar() {
 
       <Aside.Section isExtended>
         <Aside.ListOfLinks>
-          <Aside.Link to="/">
+          <Aside.Link to="/home">
             <HomeIcon />
           </Aside.Link>
           <Aside.Link to="/">
@@ -38,7 +38,7 @@ export function AsideBar() {
           <Aside.Link to="/">
             <ShareIcon />
           </Aside.Link>
-          <Aside.Link to="/">
+          <Aside.Link to="/settings">
             <SettingsIcons />
           </Aside.Link>
         </Aside.ListOfLinks>

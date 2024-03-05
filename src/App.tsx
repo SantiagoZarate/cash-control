@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage, PageNotFound, RegisterPage, UsersGuidePage } from "./pages";
 import { ProtectedRoute } from "@util/ProtectedRoute";
 import { MainLayout } from "./layouts/mainLayout/MainLayout";
+import { SettingsPage } from "./pages/settingsPage/SettingsPage";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route element={<ProtectedRoute />}>
         <Route element={<MainLayout />}>
           <Route path="/home" element={<HomePage />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Route>
       </Route>
     </Routes>
