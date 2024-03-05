@@ -8,7 +8,7 @@ export function AsideSection({ isExtended, ...args }: Props) {
   return (
     <div
       {...args}
-      className={`flex flex-col justify-between gap-2 min-h-20 items-center ${
+      className={`flex flex-col justify-between gap-2 min-h-32 items-center ${
         isExtended && "flex-1"
       }`}
     />
