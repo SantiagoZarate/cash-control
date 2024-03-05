@@ -10,6 +10,7 @@ export function MoneyDisplay() {
   const [showMoney, setShowMoney] = useState(false);
   const [hideMoney, setHideMoney] = useState(false);
 
+  // Development purposes
   useEffect(() => {
     setTimeout(() => {
       setShowMoney(true);

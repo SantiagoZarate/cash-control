@@ -5,7 +5,7 @@ export function RecentMovementsLoader() {
   return (
     <div
       id="recent-movement-loader"
-      className="relative overflow-hidden min-h-56 flex items-center justify-center bg-card rounded-xl"
+      className="relative overflow-hidden min-h-[50vh] flex items-center justify-center bg-card rounded-xl"
     >
       <div className="flex flex-col items-center gap-4">
         <div className="w-fit">
