@@ -1,0 +1,17 @@
+#recent-movement-loader {
+  position: relative;
+}
+
+#recent-movement-loader::after {
+  position: absolute;
+  z-index: 30;
+  inset: 0px;
+  content: "";
+  pointer-events: none;
+  background-image: radial-gradient(
+    300px circle at 50% 50%,
+    transparent,
+    hsl(120deg, 20%, 4%)
+  );
+}
+/* before:z-30 before:absolute before:inset-0 before:pointer-events-none before:bg-gradient-to-tl before:from-background before:via-transparent before:to-background */
