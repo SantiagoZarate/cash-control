@@ -9,7 +9,7 @@ export function RecentMovementNoResults() {
           it looks like you haven't done any movement yet
         </p>
         <p className="text-xl">why dont you try them out!?</p>
-        <a href="#hero">
+        <a href="#hero" className="w-fit">
           <Button>Go get it</Button>
         </a>
       </article>
