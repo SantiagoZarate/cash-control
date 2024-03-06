@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { RecentMovementsLoader } from "./RecentMovementsLoader";
 import { RecentMovementNoResults } from "./RecentMovementNoResults";
+import { Table } from "./Table";
 
 export function RecentMovements() {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +16,7 @@ export function RecentMovements() {
 
   if (isLoading) return <RecentMovementsLoader />;
 
-  if (!hasMovements) return <RecentMovementNoResults />;
+  if (hasMovements) return <RecentMovementNoResults />;
 
   return (
     <section className="p-20 flex flex-col gap-8">
@@ -25,6 +26,7 @@ export function RecentMovements() {
         </h4>
         <p className="text-sm">Your last 5 transactions</p>
       </header>
+      <Table />
     </section>
   );
 }
