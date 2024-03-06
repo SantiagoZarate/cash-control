@@ -11,7 +11,7 @@ export function AsideLink({ to, className, ...args }: Props) {
   return (
     <Link
       className={cn(
-        "hover:bg-border flex justify-center py-3 w-full text-center transition duration-150",
+        "hover:bg-border px-6 py-3 flex items-center gap-3 w-full text-center transition duration-150",
         className
       )}
       to={to}

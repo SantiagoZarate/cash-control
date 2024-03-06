@@ -1,0 +1,11 @@
+#aside-text {
+  opacity: 0;
+  /* display: none; */
+  transition: opacity 50ms;
+}
+
+#aside:hover #aside-text {
+  opacity: 100%;
+  /* display: block; */
+  transition: opacity 250ms;
+}

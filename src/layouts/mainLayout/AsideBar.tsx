@@ -1,8 +1,10 @@
 import {
+  ExtractMoneyIcon,
+  FundMoneyIcon,
   HomeIcon,
   LogOutIcon,
-  MoneyIcon,
   ProfileIcon,
+  SendIcon,
   SettingsIcons,
   ShareIcon,
 } from "@icon";
@@ -16,10 +18,13 @@ export function AsideBar() {
         <div />
         <Aside.ListOfLinks>
           <Aside.Link to="/" className="text-2xl">
-            💸
+            <Aside.Icon>💸</Aside.Icon>
           </Aside.Link>
           <Aside.Link to="/">
-            <ProfileIcon />
+            <Aside.Icon>
+              <ProfileIcon />
+            </Aside.Icon>
+            <Aside.Text>Profile</Aside.Text>
           </Aside.Link>
         </Aside.ListOfLinks>
       </Aside.Section>
@@ -27,19 +32,43 @@ export function AsideBar() {
       <Aside.Section isExtended>
         <Aside.ListOfLinks>
           <Aside.Link to="/home">
-            <HomeIcon />
+            <Aside.Icon>
+              <HomeIcon />
+            </Aside.Icon>
+            <Aside.Text>home</Aside.Text>
           </Aside.Link>
           <Aside.Link to="/">
-            <MoneyIcon />
+            <Aside.Icon>
+              <ExtractMoneyIcon />
+            </Aside.Icon>
+            <Aside.Text>Extact</Aside.Text>
+          </Aside.Link>
+          <Aside.Link to="/">
+            <Aside.Icon>
+              <FundMoneyIcon />
+            </Aside.Icon>
+            <Aside.Text>Add</Aside.Text>
+          </Aside.Link>
+          <Aside.Link to="/">
+            <Aside.Icon>
+              <SendIcon />
+            </Aside.Icon>
+            <Aside.Text>Send</Aside.Text>
           </Aside.Link>
         </Aside.ListOfLinks>
 
         <Aside.ListOfLinks>
           <Aside.Link to="/">
-            <ShareIcon />
+            <Aside.Icon>
+              <ShareIcon />
+            </Aside.Icon>
+            <Aside.Text>share</Aside.Text>
           </Aside.Link>
           <Aside.Link to="/settings">
-            <SettingsIcons />
+            <Aside.Icon>
+              <SettingsIcons />
+            </Aside.Icon>
+            <Aside.Text>settings</Aside.Text>
           </Aside.Link>
         </Aside.ListOfLinks>
       </Aside.Section>
@@ -47,7 +76,10 @@ export function AsideBar() {
       <Aside.Section>
         <Aside.ListOfLinks>
           <Aside.Link to="/">
-            <LogOutIcon />
+            <Aside.Icon>
+              <LogOutIcon />
+            </Aside.Icon>
+            <Aside.Text>logout</Aside.Text>
           </Aside.Link>
         </Aside.ListOfLinks>
       </Aside.Section>
