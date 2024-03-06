@@ -1,6 +1,7 @@
 import { ExtractMoneyIcon, FundMoneyIcon, SendIcon } from "@icon";
 import { ActionCard } from "./ActionCard";
 import { ActionsHeader } from "./ActionsHeader";
+import { ActionProfile } from "./ActionProfile";
 
 const actions = [
   {
@@ -25,12 +26,13 @@ const actions = [
 
 export function Actions() {
   return (
-    <section className="col-span-2 flex flex-col gap-4 flex-1">
+    <section className="flex flex-col gap-4 flex-1">
       <ActionsHeader />
-      <article className=" z-10 h-fit grid grid-cols-actions-responsive gap-4">
+      <article className="z-10 h-fit grid grid-cols-actions gap-4">
         {actions.map((action) => (
           <ActionCard {...action} />
         ))}
+        <ActionProfile />
       </article>
     </section>
   );

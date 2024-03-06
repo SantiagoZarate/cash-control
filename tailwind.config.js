@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        "actions-responsive": "repeat(auto-fill, minmax(270px, 1fr))",
+        actions: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
       },
       fontFamily: {
         NunitoSans: ["NunitoSans", "sans-serif"],
