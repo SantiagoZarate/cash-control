@@ -16,7 +16,7 @@ export function RightSide() {
         </Button>
       </div>
       <RegisterForm isSignUp={showSignUp} />
-      <Badge>
+      <Badge intention={"default"}>
         <a href="/guide" className="text-border-active">
           click here if you just wanna see the rest of the app lol...
         </a>

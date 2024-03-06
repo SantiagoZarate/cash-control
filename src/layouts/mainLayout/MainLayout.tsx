@@ -1,3 +1,7 @@
+/**
+ * MainLayout has to ve visible throughout the entire app
+ */
+
 import { Outlet } from "react-router-dom";
 import { AsideBar } from "./AsideBar";
 

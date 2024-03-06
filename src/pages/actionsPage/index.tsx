@@ -1,1 +1,1 @@
-export * from "./ActionsPage";
+export * from "./ActionsSendPage";

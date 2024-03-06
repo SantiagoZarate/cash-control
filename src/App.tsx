@@ -3,7 +3,8 @@ import { HomePage, PageNotFound, RegisterPage, UsersGuidePage } from "./pages";
 import { ProtectedRoute } from "@util/ProtectedRoute";
 import { MainLayout } from "./layouts/mainLayout/MainLayout";
 import { SettingsPage } from "./pages/settingsPage/SettingsPage";
-import { ActionsPage } from "./pages/actionsPage";
+import { ActionsSendPage } from "./pages/actionsPage";
+import { ActionsLayout } from "./layouts/actionsLayout/ActionsLayout";
 
 export default function App() {
   return (
@@ -16,7 +17,13 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/actions" element={<ActionsPage />} />
+          <Route path="/profile" element={<p>TODO</p>} />
+
+          <Route element={<ActionsLayout />}>
+            <Route path="/actions/add" element={<ActionsLayout />}></Route>
+            <Route path="/actions/send" element={<ActionsSendPage />}></Route>
+            <Route path="/actions/extract" element={<ActionsLayout />}></Route>
+          </Route>
         </Route>
       </Route>
     </Routes>

@@ -26,11 +26,18 @@ const badeStyle = cva(
 
 type Props = CVAProps<"button", typeof badeStyle>;
 
-export function Badge({ className, intention, size, ...args }: Props) {
+export function Badge({
+  className,
+  intention,
+  size,
+  children,
+  ...args
+}: Props) {
   return (
     <span className={cn(badeStyle({ className, intention, size }))} {...args}>
       {intention === "completed" && "completed"}
       {intention === "canceled" && "canceled"}
+      {children}
     </span>
   );
 }
