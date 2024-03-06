@@ -3,6 +3,7 @@ import { HomePage, PageNotFound, RegisterPage, UsersGuidePage } from "./pages";
 import { ProtectedRoute } from "@util/ProtectedRoute";
 import { MainLayout } from "./layouts/mainLayout/MainLayout";
 import { SettingsPage } from "./pages/settingsPage/SettingsPage";
+import { ActionsPage } from "./pages/actionsPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/actions" element={<ActionsPage />} />
         </Route>
       </Route>
     </Routes>
