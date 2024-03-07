@@ -1,4 +1,6 @@
-export const movements = [
+import { Movement } from "@type";
+
+export const movements: Movement[] = [
   {
     type: "add",
     amount: 222.32,
@@ -53,4 +55,42 @@ export const movements = [
       country: "poland",
     },
   },
+  {
+    type: "send",
+    amount: 86.11,
+    currency: {
+      type: "ars",
+      amount: 371.12,
+    },
+    date: {
+      day: "april 4",
+      year: 2024,
+    },
+    completed: false,
+    partner: {
+      username: "Joao da silva",
+      pfp: "https://i.pinimg.com/1200x/0a/13/a9/0a13a9b63b9ab11125e7a5e117a67a61.jpg",
+      country: "Brazil",
+    },
+  },
+  {
+    type: "send",
+    amount: 86.11,
+    currency: {
+      type: "ars",
+      amount: 371.12,
+    },
+    date: {
+      day: "april 4",
+      year: 2024,
+    },
+    completed: false,
+    partner: {
+      username: "Matias Recalde",
+      pfp: "https://i.pinimg.com/236x/71/ac/33/71ac33eaa46f49c456044dd1f5a88f64.jpg",
+      country: "Sweden",
+    },
+  },
 ];
+
+export const movementsSend = movements.filter((mov) => mov.type === "send");

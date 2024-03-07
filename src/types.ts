@@ -10,3 +10,22 @@ export type CVAProps<
 > = ComponentProps<Component> & VariantProps<Styles>;
 
 export type Currency = (typeof currencys)[number];
+
+export type Movement = {
+  type: string;
+  amount: number;
+  currency: {
+    type: string;
+    amount: number;
+  };
+  date: {
+    day: string;
+    year: number;
+  };
+  completed: boolean;
+  partner: {
+    username: string;
+    pfp: string;
+    country: string;
+  };
+};
