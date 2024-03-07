@@ -1,6 +1,6 @@
 import { Heading } from "@component";
-import { useCurrency } from "@context/currencyContext";
 import { currencys } from "@data/currencys";
+import { useCurrency } from "@hook/useCurrency";
 import { Currency } from "@type";
 
 export function SettingsCurrency() {

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { MoneyAmount } from "./MoneyAmount";
 import { MoneyLoader } from "./MoneyLoader";
 import { BlurBalls } from "./BlurBalls";
-import { useCurrency } from "@context/currencyContext";
+import { useCurrency } from "@hook/useCurrency";
 
 const BlurBallsMemo = React.memo(BlurBalls);
 
