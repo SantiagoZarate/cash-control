@@ -1,10 +1,9 @@
+import { getLastParam } from "@helper/getLastParam";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 export function ActionsLayout() {
   const { pathname } = useLocation();
-  const pathToArray = pathname.split("/");
-  const activePage = pathToArray[pathToArray.length - 1];
-  console.log("Renderizando el layout de las acciones");
+  const activePage = getLastParam(pathname);
 
   return (
     <section className="relative min-h-screen mx-auto flex flex-col">
@@ -22,7 +21,7 @@ export function ActionsLayout() {
               to={"/actions/" + page}
               className={`${
                 activePage === page ? "border-accent" : "border-border"
-              } hover:opacity-50 duration-150 transition py-8 min-w-24 border-b-2  text-center uppercase tracking-wider`}
+              } hover:opacity-50 duration-300 transition py-8 min-w-24 border-b-2  text-center uppercase tracking-wider`}
             >
               {page}
             </Link>
