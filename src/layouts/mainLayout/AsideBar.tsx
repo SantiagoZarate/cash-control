@@ -37,19 +37,19 @@ export function AsideBar() {
             </Aside.Icon>
             <Aside.Text>home</Aside.Text>
           </Aside.Link>
-          <Aside.Link to="/">
+          <Aside.Link to="/actions/extract">
             <Aside.Icon>
               <ExtractMoneyIcon />
             </Aside.Icon>
             <Aside.Text>Extact</Aside.Text>
           </Aside.Link>
-          <Aside.Link to="/">
+          <Aside.Link to="/actions/add">
             <Aside.Icon>
               <FundMoneyIcon />
             </Aside.Icon>
             <Aside.Text>Add</Aside.Text>
           </Aside.Link>
-          <Aside.Link to="/">
+          <Aside.Link to="/actions/send">
             <Aside.Icon>
               <SendIcon />
             </Aside.Icon>

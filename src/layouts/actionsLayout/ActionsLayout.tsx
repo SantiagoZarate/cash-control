@@ -1,6 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 export function ActionsLayout() {
+  const { pathname } = useLocation();
+  const pathToArray = pathname.split("/");
+  const activePage = pathToArray[pathToArray.length - 1];
+  console.log("Renderizando el layout de las acciones");
+
   return (
     <section className="relative min-h-screen mx-auto flex flex-col">
       <img
@@ -11,24 +16,17 @@ export function ActionsLayout() {
       />
       <header className="w-full px-20 border-b border-border">
         <nav className="max-w-[1440px] mx-auto flex gap-8">
-          <Link
-            to={"/home"}
-            className="hover:brightness-150 duration-150 transition py-8 min-w-24 border-b-2 border-border text-center uppercase tracking-wider"
-          >
-            Add
-          </Link>
-          <Link
-            to={"/home"}
-            className="hover:brightness-150 duration-150 transition py-8 min-w-24 border-b-2 border-border text-center uppercase tracking-wider"
-          >
-            Extract
-          </Link>
-          <Link
-            to={"/home"}
-            className="hover:brightness-150 duration-150 transition py-8 border-b-2 border-accent min-w-24 text-center uppercase tracking-wider"
-          >
-            Send
-          </Link>
+          {["send", "add", "extract"].map((page) => (
+            <Link
+              key={page}
+              to={"/actions/" + page}
+              className={`${
+                activePage === page ? "border-accent" : "border-border"
+              } hover:brightness-150 duration-150 transition py-8 min-w-24 border-b-2  text-center uppercase tracking-wider`}
+            >
+              {page}
+            </Link>
+          ))}
         </nav>
       </header>
       <Outlet />

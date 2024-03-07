@@ -1,4 +1,6 @@
 import {
+  ActionsAddPage,
+  ActionsExtractPage,
   ActionsSendPage,
   HomePage,
   PageNotFound,
@@ -22,12 +24,14 @@ export default function App() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/profile" element={<p>TODO</p>} />
 
           <Route element={<ActionsLayout />}>
-            <Route path="/actions/add" element={<ActionsLayout />}></Route>
+            <Route path="/actions/add" element={<ActionsAddPage />}></Route>
             <Route path="/actions/send" element={<ActionsSendPage />}></Route>
-            <Route path="/actions/extract" element={<ActionsLayout />}></Route>
+            <Route
+              path="/actions/extract"
+              element={<ActionsExtractPage />}
+            ></Route>
           </Route>
         </Route>
       </Route>
