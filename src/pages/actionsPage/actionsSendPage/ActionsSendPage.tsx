@@ -1,24 +1,32 @@
 import { Button, Form } from "@component";
 import { movementsSend } from "@data/movements";
-import { useRegisterForm } from "@hook/useRegisterForm";
+import { useForm } from "react-hook-form";
 import { UsersIcon, MoneyIcon, SendIcon } from "@icon";
 import { Movement } from "@type";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FormProvider } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { RepeatMovementsTab } from "./RepeatMovementsTab";
+
+const sendMovementSchema = z.object({
+  amount: z.coerce.number().min(0.5),
+  username: z.string(),
+});
+
+type SendMovement = z.infer<typeof sendMovementSchema>;
 
 export function ActionsSendPage() {
-  const { methods } = useRegisterForm(true);
-  const [movements] = useState<Movement[]>(movementsSend);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(true);
-    }, 3000);
+  const methods = useForm<SendMovement>({
+    resolver: zodResolver(sendMovementSchema),
   });
+  const [movements] = useState<Movement[]>(movementsSend);
+  const { setValue, register } = methods;
 
   const handleRepeatTransaction = (index: number) => {
-    console.log(movements![index]);
+    const { amount, partner } = movements![index];
+    setValue("amount", amount);
+    setValue("username", partner.username);
   };
 
   return (
@@ -32,8 +40,8 @@ export function ActionsSendPage() {
             </Form.Label>
             <Form.Input
               id="destinatary"
-              name="2"
-              placeholder="thisisafakeemail@gmail.com"
+              name="username"
+              placeholder="lionel messi"
             />
           </Form.Field>
           <Form.Field>
@@ -42,6 +50,7 @@ export function ActionsSendPage() {
               Amount
             </Form.Label>
             <input
+              {...register("amount")}
               id="amount"
               className="bg-transparent text-center text-[80px] outline-border ring-0 placeholder:text-primary-fg border-b border-border"
               type="text"
@@ -57,43 +66,10 @@ export function ActionsSendPage() {
         </Form.Root>
       </FormProvider>
 
-      <div className="group absolute flex w-96 hover:right-0 rounded-tl-3xl rounded-bl-3xl -right-[340px] bg-black/30 h-full transition-all duration-500">
-        <p className="w-12 [writing-mode:vertical-lr] p-2 flex justify-center items-center text-sm tracking-wider uppercase">
-          Repeat recent movements
-        </p>
-        <ul className="h-full w-full flex flex-col gap-4 p-4 bg-black/30 duration-300 transition-all">
-          {isLoading ? (
-            <div className="bg-card border border-border rounded-lg h-20 animate-pulse" />
-          ) : (
-            movements?.map((mov, index) => (
-              <button
-                onClick={() => handleRepeatTransaction(index)}
-                className="bg-card min-w justify-between flex gap-4 p-2 items-center border border-border rounded-lg hover:-translate-y-1 duration-150 transition-transform hover:opacity-70"
-              >
-                <div className="flex gap-2 items-center">
-                  <picture>
-                    <img
-                      className="size-12 rounded-full"
-                      src={mov.partner.pfp}
-                      alt=""
-                    />
-                  </picture>
-                  <article className="flex-1 flex-col">
-                    <p className="capitalize text-sm">{mov.partner.username}</p>
-                    <p className="text-start text-xs capitalize text-border-active">
-                      {mov.partner.country}
-                    </p>
-                  </article>
-                </div>
-                <div className="font-bold flex gap-1">
-                  <span className="text-accent">${mov.amount}</span>
-                  USD
-                </div>
-              </button>
-            ))
-          )}
-        </ul>
-      </div>
+      <RepeatMovementsTab
+        onSelectCard={handleRepeatTransaction}
+        movements={movements}
+      />
     </article>
   );
 }

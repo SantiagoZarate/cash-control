@@ -57,7 +57,7 @@ export const movements: Movement[] = [
   },
   {
     type: "send",
-    amount: 86.11,
+    amount: 402.5,
     currency: {
       type: "ars",
       amount: 371.12,
@@ -75,7 +75,7 @@ export const movements: Movement[] = [
   },
   {
     type: "send",
-    amount: 86.11,
+    amount: 12.01,
     currency: {
       type: "ars",
       amount: 371.12,
