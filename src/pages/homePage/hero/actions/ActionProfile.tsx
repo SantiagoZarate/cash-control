@@ -4,7 +4,7 @@ export function ActionProfile() {
   return (
     <Link
       to={"/"}
-      className="border-dashed border p-2 gap-4 divide-border border-border bg-black/30 rounded-lg flex flex-col justify-center hover:-translate-y-1 duration-150 transition hover:brightness-150 px-4"
+      className="border-dashed border p-2 gap-4 divide-border border-border bg-black/30 rounded-lg flex flex-col justify-center hover:-translate-y-1 duration-150 transition hover:opacity-50 px-4"
     >
       <article className=" items-center flex justify-center">
         <p className="w-full text-sm">Configure your profile</p>

@@ -22,7 +22,7 @@ export function ActionsLayout() {
               to={"/actions/" + page}
               className={`${
                 activePage === page ? "border-accent" : "border-border"
-              } hover:brightness-150 duration-150 transition py-8 min-w-24 border-b-2  text-center uppercase tracking-wider`}
+              } hover:opacity-50 duration-150 transition py-8 min-w-24 border-b-2  text-center uppercase tracking-wider`}
             >
               {page}
             </Link>

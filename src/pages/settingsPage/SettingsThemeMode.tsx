@@ -16,7 +16,7 @@ export function SettingsThemeMode() {
       </div>
       <div
         onClick={toggleMode}
-        className="cursor-pointer relative w-24 h-12 border border-border grid grid-cols-2 rounded-full p-1 hover:brightness-150 transition-all duration-150 bg-background"
+        className="cursor-pointer relative w-24 h-12 border border-border grid grid-cols-2 rounded-full p-1 hover:opacity-50 transition-all duration-150 bg-background"
       >
         <span
           className={`relative bg-card border border-border flex items-center justify-center rounded-full duration-150 transition-all ${
