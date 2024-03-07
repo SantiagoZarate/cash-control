@@ -21,6 +21,19 @@
 
 @layer base {
   :root {
+    --background: 120deg 20% 96%;
+    --card: 120deg 20% 92%;
+    --disabled: 100deg 30% 80%;
+    --border: 120deg 9% 83%;
+    --border-active: 120deg 9% 53%;
+    --primary: 120deg 30% 20%;
+    --primary-fg: 120deg 30% 40%;
+    --destructive: 5deg 60% 70%;
+    --destructive-fg: 5deg 80% 30%;
+    --accent: 120deg 50% 50%;
+  }
+
+  :root[data-theme="dark"] {
     --background: 120deg 20% 4%;
     --card: 120deg 20% 8%;
     --disabled: 100deg 30% 20%;
