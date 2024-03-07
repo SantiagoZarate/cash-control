@@ -1,10 +1,15 @@
+import {
+  ActionsSendPage,
+  HomePage,
+  PageNotFound,
+  RegisterPage,
+  SettingsPage,
+  UsersGuidePage,
+} from "./pages";
 import { Route, Routes } from "react-router-dom";
-import { HomePage, PageNotFound, RegisterPage, UsersGuidePage } from "./pages";
-import { ProtectedRoute } from "@util/ProtectedRoute";
 import { MainLayout } from "./layouts/mainLayout/MainLayout";
-import { SettingsPage } from "./pages/settingsPage/SettingsPage";
-import { ActionsSendPage } from "./pages/actionsPage";
 import { ActionsLayout } from "./layouts/actionsLayout/ActionsLayout";
+import { ProtectedRoute } from "@helper/ProtectedRoute";
 
 export default function App() {
   return (

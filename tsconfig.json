@@ -27,6 +27,7 @@
       "@component": ["src/components/index.ts"],
       "@type": ["src/types.ts"],
       "@util/*": ["src/util/*"],
+      "@helper/*": ["src/helpers/*"],
       "@hook/*": ["src/hooks/*"],
       "@data/*": ["src/data/*"]
     }

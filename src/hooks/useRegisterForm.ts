@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LogInSchema, SignUpType, signUpSchema } from "@util/registerSchema";
+import { LogInSchema, SignUpType, signUpSchema } from "@helper/registerSchema";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { tasks } from "../api/user/tasks";

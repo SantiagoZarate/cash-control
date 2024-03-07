@@ -1,4 +1,4 @@
-import { SignUpType } from "@util/registerSchema";
+import { SignUpType } from "src/helpers/registerSchema";
 import { ComponentProps } from "react";
 import { useFormContext } from "react-hook-form";
 
