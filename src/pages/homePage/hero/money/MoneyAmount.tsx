@@ -1,8 +1,9 @@
 type Props = {
   hideMoney: boolean;
+  currency: string;
 };
 
-export function MoneyAmount({ hideMoney }: Props) {
+export function MoneyAmount({ hideMoney, currency }: Props) {
   return (
     <>
       <p className="flex gap-2 items-baseline">
@@ -17,7 +18,7 @@ export function MoneyAmount({ hideMoney }: Props) {
       </p>
       <p className="flex gap-2 items-baseline">
         <span className="font-bold">{hideMoney ? "$4.912.18" : "$*****"}</span>
-        ARS
+        <span className="uppercase">{currency}</span>
       </p>
     </>
   );

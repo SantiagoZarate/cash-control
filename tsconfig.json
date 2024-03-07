@@ -28,6 +28,7 @@
       "@type": ["src/types.ts"],
       "@util/*": ["src/util/*"],
       "@helper/*": ["src/helpers/*"],
+      "@context/*": ["src/context/*"],
       "@hook/*": ["src/hooks/*"],
       "@data/*": ["src/data/*"]
     }

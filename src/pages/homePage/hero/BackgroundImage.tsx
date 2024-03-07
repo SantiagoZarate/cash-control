@@ -1,4 +1,4 @@
-export function LightImage() {
+export function BackgroundImage() {
   return (
     <picture className="absolute top-0 z-20 pointer-events-none">
       <img

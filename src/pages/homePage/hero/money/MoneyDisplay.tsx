@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import { MoneyAmount } from "./MoneyAmount";
 import { MoneyLoader } from "./MoneyLoader";
 import { BlurBalls } from "./BlurBalls";
+import { useCurrency } from "@context/currencyContext";
 
 const BlurBallsMemo = React.memo(BlurBalls);
 
 export function MoneyDisplay() {
+  const { currency } = useCurrency();
   const [showMoney, setShowMoney] = useState(false);
   const [hideMoney, setHideMoney] = useState(false);
 
@@ -29,7 +31,11 @@ export function MoneyDisplay() {
       </header>
       <section className="pb-2 border-b border-border flex items-center gap-20">
         <div className="flex flex-col gap-2 flex-1">
-          {showMoney ? <MoneyAmount hideMoney={hideMoney} /> : <MoneyLoader />}
+          {showMoney ? (
+            <MoneyAmount hideMoney={hideMoney} currency={currency} />
+          ) : (
+            <MoneyLoader />
+          )}
         </div>
         <button
           onClick={() => setHideMoney(!hideMoney)}
@@ -38,7 +44,9 @@ export function MoneyDisplay() {
           {hideMoney ? <OpenEyenIcon /> : <ClosedEyeIcon />}
         </button>
       </section>
-      <footer className="text-border-active">$1 USD = $1000 ARS</footer>
+      <footer className="text-border-active uppercase">
+        $1 usd = $1000 {currency}
+      </footer>
     </article>
   );
 }
