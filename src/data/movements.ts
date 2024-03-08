@@ -66,7 +66,7 @@ export const movements: Movement[] = [
       day: "april 4",
       year: 2024,
     },
-    completed: false,
+    completed: true,
     partner: {
       username: "Joao da silva",
       pfp: "https://i.pinimg.com/1200x/0a/13/a9/0a13a9b63b9ab11125e7a5e117a67a61.jpg",

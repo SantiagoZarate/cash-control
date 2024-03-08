@@ -27,6 +27,7 @@ export function RecentMovementsTable() {
               </Table.DataCell>
               <Table.DataCell>
                 <TableAmount
+                  type={type}
                   amount={amount}
                   conversion={currency.amount}
                   currency={currency.type}
